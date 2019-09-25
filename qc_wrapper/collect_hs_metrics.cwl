@@ -28,6 +28,8 @@ inputs:
     inputBinding:
       prefix: --INPUT
       position: 2
+    secondaryFiles:
+      - ^.bai
       
   BI:
     type: File?
@@ -57,6 +59,9 @@ inputs:
     inputBinding:
       prefix: --REFERENCE_SEQUENCE
       position: 2
+    secondaryFiles:
+      - .fai
+      - ^.dict
 
   mem_option:
     type: string?
