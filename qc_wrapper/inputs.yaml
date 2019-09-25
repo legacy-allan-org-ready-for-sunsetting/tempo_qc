@@ -1,5 +1,5 @@
 {
-    'reference_sequence': {   'class': 'File',
+    'REFERENCE_SEQUENCE': {   'class': 'File',
                               'path': '/path/to/ref.fasta',
                               'secondaryFiles': [ { 'class': 'File',
                                                     'path': '/path/to/ref.fasta.fai'
@@ -8,14 +8,15 @@
                                                     'path': '/path/to/ref.dict'
                                                 }]
                           },
-    'bam': { 'class': 'File',
+    'INPUT': { 'class': 'File',
              'path': '/path/to/file.bam',
              'secondaryFiles': [ { 'class': 'File',
-                                   'path': '/path/to/file.bam.bai' 
+                                   'path': '/path/to/file.bai' 
                                 } ]
            },
-    'targets_list': { 'class': 'File',
+    'OUTPUT': 'my_output_file.txt',
+    'TARGET_INTERVALS': { 'class': 'File',
              'path': '/path/to/file.target_interval_lists'},
-    'bailts_list': { 'class': 'File',
+    'BAIT_INTERVALS': { 'class': 'File',
              'path': '/path/to/file.baits.interval_lists' }
 }

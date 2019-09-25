@@ -23,7 +23,7 @@ doc: |
   This is a CWL that wraps a call to CollectHsMetrics  
 
 inputs:
-  I:
+  INPUT:
     type: File
     inputBinding:
       prefix: --INPUT
@@ -31,7 +31,7 @@ inputs:
     secondaryFiles:
       - ^.bai
       
-  BI:
+  BAIT_INTERVALS:
     type: File?
     doc: An interval list file that contains the locations of the baits used. Default
       value - null. This option must be specified at least 1 times.
@@ -39,7 +39,7 @@ inputs:
       prefix: --BAIT_INTERVALS
       position: 2
       
-  TI:
+  TARGET_INTERVALS:
     type: File?
     doc: An interval list file that contains the locations of the targets. Default
       value - null. This option must be specified at least 1 times.
@@ -47,7 +47,7 @@ inputs:
       prefix: --TARGET_INTERVALS
       position: 2
       
-  O:
+  OUTPUT:
     type: string
     doc: The output file to write the metrics to. Required.
     inputBinding:
@@ -76,7 +76,7 @@ outputs:
     outputBinding:
       glob: |
         ${
-          if (inputs.O)
-            return inputs.O;
+          if (inputs.OUTPUT)
+            return inputs.OUTPUT;
           return null;
         }
