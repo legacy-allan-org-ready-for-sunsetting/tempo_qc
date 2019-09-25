@@ -24,6 +24,7 @@ if __name__ == "__main__":
 
   if baits is None or targets is None:
     open(output_file, 'w').write("No baits/targets file provided for this run")
+    sys.exit(0)
   else:
     java_options = ""
     if mem is not None:
